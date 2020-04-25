@@ -113,14 +113,12 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&display=swap');
 
 .number{
-   //background-color:  #524fff;
+  
     margin:10px;
     color: red;
-   //border:5px solid black;
-   //border-radius: 15px;
+
     display: inline;
-   //padding:.35rem .5rem;
-   //float:right
+
 }
 
 .txtEffect{

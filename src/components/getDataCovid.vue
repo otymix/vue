@@ -24,10 +24,10 @@
       </v-card-text>
   
       <v-card-actions>
-        <v-btn     color="cyan"     text >     
+        <!--v-btn     color="cyan"     text >     
           Partager
-        </v-btn>
-  
+        </v-btn-->
+        <share />
         <v-btn     color="blue"      text >
           Puis-Je-Survivre-Au-Covid?
         </v-btn>
@@ -45,7 +45,7 @@ let covidApiEndpoint = 'https://api.thevirustracker.com/free-api?countryTotal=FR
 //let CountryCode = 'FR'
 //const request = require('request')
 import axios from 'axios';
-
+import share from '@/components/share.vue';
 
 
 
@@ -53,6 +53,10 @@ var show = true
 
 
 export default {
+  components : {
+    share
+  },
+
  
     methods:{
 

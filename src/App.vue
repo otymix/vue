@@ -5,8 +5,10 @@
         <v-container >
                 <FirstComponent/>
                 <getDataCovid />
+                <share />
         </v-container>
       </v-content>
+      
     </v-app>
  
 </template>
@@ -14,7 +16,9 @@
 <script>
 
 import FirstComponent from './components/FirstComponent';
-import getDataCovid from '@/components/getDataCovid.vue'
+import getDataCovid from '@/components/getDataCovid.vue';
+
+
 export default {
   name: 'App',
 

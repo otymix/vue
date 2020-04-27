@@ -16,7 +16,7 @@
   
       <v-card-text class="text">
            <br /> 
-           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 1.2em"> En se basant sur le taux de mortalité de <em class="oms">2%</em> du Covid-19, en partant du nombre total de décés actuel <p class="number">  {{covidDataFR.data.countrydata[0].total_deaths}}</p> , le nombre de cas des contaminés en France serait estimé alors à  <h2 class="number"> {{ estimatedCases }}</h2>
+           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité de <em class="oms">2%</em> du Covid-19, en partant du nombre total de décés actuel <p class="number">  {{covidDataFR.data.countrydata[0].total_deaths}}</p> , le nombre de cas des contaminés en France serait estimé alors à  <h2 class="estimated"> {{ estimatedCases }}</h2>
            Ainsi le pourcentage de la population immunisé à l'heure actuelle est : <p class="number">{{ this.estimatedPercentage }} %</p> 
            Aussi, selon les dernières statistiques du nb de morts/Jour, la France enregistre quasiment 
             <div class="number"> {{ this.oneDeathPerXmin }} morts par minute </div> ! 
@@ -115,10 +115,18 @@ export default {
 .number{
   
     margin:10px;
-    color: red;
-
     display: inline;
+    color:red
+}
 
+.estimated{
+  
+    margin:10px;
+    display: inline;
+    background-color:red;
+    color:white;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .txtEffect{
@@ -128,13 +136,13 @@ export default {
 
 .h1{
     color:black;
-    line-height: 1.2rem;
+    line-height: 2.4rem;
    
    
     
 }
 .oms{
-    color:red
+    color:red;
 
 }
 

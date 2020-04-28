@@ -7,19 +7,21 @@
 
       <br />
 
- <v-card class="mx-auto" max-width="80%">
+ <v-card  class="mx-auto" max-width="80%">
       <v-img class="white--text align-end"  height="200px"   src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/langfr-1280px-Flag_of_France.svg.png"  >
-        <v-card-title style="background-color:#0000008c"> Chiffres clés estimées</v-card-title>
+        <v-card-title style="background-color:#0000008c"> En attendant un dépistage massif... </v-card-title>
       </v-img>
   
-      <v-card-subtitle class="pb-0">Aujourd'hui</v-card-subtitle>
+      <v-card-subtitle class="pb-0">*ceci est une estimation basée sur les 2 élements les plus fiables (nb décés, taux de mortalité)</v-card-subtitle>
   
       <v-card-text class="text">
            <br /> 
-           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité de <em class="oms">2%</em> du Covid-19, en partant du nombre total de décés actuel <p class="number">  {{covidDataFR.data.countrydata[0].total_deaths}}</p> , le nombre de cas des contaminés en France serait estimé alors à  <h2 class="estimated"> {{ estimatedCases }}</h2>
-           Ainsi le pourcentage de la population immunisé à l'heure actuelle est : <p class="number">{{ this.estimatedPercentage }} %</p> 
+           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité du Covid-19 <em style="color:#796262">(approx.)</em> de <strong class="oms">2%</strong>, sachant que le nombre total de décés actuel :<p class="number">{{covidDataFR.data.countrydata[0].total_deaths}}</p>, le nombre de contaminé(e)s en France serait estimé alors à  <h2 class="estimated"> {{ estimatedCases }}</h2>
+           résultant en un pourcentage de la population immunisé à l'heure actuelle de :<p class="number">{{ this.estimatedPercentage }} %</p> 
+           <!--
            Aussi, selon les dernières statistiques du nb de morts/Jour, la France enregistre quasiment 
-            <div class="number"> {{ this.oneDeathPerXmin }} morts par minute </div> ! 
+            <div class="number"> {{ this.oneDeathPerXmin }} morts par minute </div> 
+            -->
           </h2>
       </v-card-text>
   
@@ -120,17 +122,19 @@ export default {
   
     margin:10px;
     display: inline;
-    color:red
+    color:#111873 !important;
 }
 
 .estimated{
-  
-    margin:10px;
     display: inline;
-    background-color:red;
-    color:white;
-    border: 1px solid black;
+    display: inline;
+    color: black;
+    background-image: linear-gradient(to left, #ed2436, #e6071b42, #ffffff, #515e9a8c, #021d97);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 89%;
     border-radius: 5px;
+    transition: background-size 0.25s ease-in;
 }
 
 .txtEffect{
@@ -147,7 +151,6 @@ export default {
 }
 .oms{
     color:red;
-
 }
 
 

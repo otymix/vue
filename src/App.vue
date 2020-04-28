@@ -1,7 +1,7 @@
 <template>
 
    <v-app>
-      <v-content class="blue lighten-5" >
+      <v-content class="black" >
         <v-container >
                 <FirstComponent/>
                 <getDataCovid />

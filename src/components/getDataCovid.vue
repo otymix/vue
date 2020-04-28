@@ -16,8 +16,8 @@
   
       <v-card-text class="text">
            <br /> 
-           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité du Covid-19 <em style="color:#796262">(approx.)</em> de <strong class="oms">2%</strong>, sachant que le nombre total de décés actuel :<p class="number">{{covidDataFR.data.countrydata[0].total_deaths}}</p>, le nombre de contaminé(e)s en France serait estimé alors à  <h2 class="estimated"> {{estimatedCases_formatted}}</h2>
-           résultant en un pourcentage de la population immunisé à l'heure actuelle de :<p class="number">{{ this.estimatedPercentage }} %</p> 
+           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité du Covid-19 <em style="color:#796262">(approx.)</em> de <strong class="oms">2%</strong>, sachant que le nb total de décés actuel :<p class="number">{{covidDataFR.data.countrydata[0].total_deaths}}</p>, le nombre de contaminé(e)s en France serait estimé alors à  <h1 class="estimated"> {{estimatedCases_formatted}}</h1>
+           résultant en un pourcentage de la population immunisé à l'heure actuelle de :<h1 class="number">{{ this.estimatedPercentage }} %</h1> 
            <!--
            Aussi, selon les dernières statistiques du nb de morts/Jour, la France enregistre quasiment 
             <div class="number"> {{ this.oneDeathPerXmin }} morts par minute </div> 
@@ -140,6 +140,7 @@ export default {
     background-position: 0 89%;
     border-radius: 5px;
     transition: background-size 0.25s ease-in;
+    line-height:2;
 }
 
 .txtEffect{
@@ -161,7 +162,7 @@ export default {
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
-  color: black;
+  color: white;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
@@ -182,7 +183,7 @@ export default {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange }
+  50% { border-color: red }
 }
 
 </style>

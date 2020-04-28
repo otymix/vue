@@ -77,6 +77,10 @@ export default {
                         let total_deaths = response.data.countrydata[0].total_deaths
                         let fr_population = 67000000
                         this.estimatedCases = (total_deaths * 100 / 2)
+                        let part1 = this.estimatedCases.toString().substr(0,1)
+                        let part2 = this.estimatedCases.toString().substr(1, 3)
+                        let part3 = this.estimatedCases.toString().substr(4, 6)
+                        this.estimatedCases = part1.concat(" "+part2).concat(" "+part3)
                         this.estimatedPercentage = (this.estimatedCases/fr_population * 100).toFixed(2)
                         console.log(`estimatedCases : ${this.estimatedCases}`) 
                         

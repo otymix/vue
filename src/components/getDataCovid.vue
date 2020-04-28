@@ -2,7 +2,7 @@
     <div>
 
       <div class="typewriter">
-        <h1 >Estimation du nombre d'infecté(e)s en France 🇫🇷 </h1>
+        <h1 >Esimation du nombre d'infecté(e)s en France 🇫🇷 </h1>
       </div>
 
       <br />
@@ -16,7 +16,7 @@
   
       <v-card-text class="text">
            <br /> 
-           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité du Covid-19 <em style="color:#796262">(approx.)</em> de <strong class="oms">2%</strong>, sachant que le nombre total de décés actuel :<p class="number">{{covidDataFR.data.countrydata[0].total_deaths}}</p>, le nombre de contaminé(e)s en France serait estimé alors à  <h2 class="estimated"> {{ estimatedCases }}</h2>
+           <h2 class="font-weight-medium txtEffect" style="color:black ; line-height: 2.5rem"> En se basant sur le taux de mortalité du Covid-19 <em style="color:#796262">(approx.)</em> de <strong class="oms">2%</strong>, sachant que le nombre total de décés actuel :<p class="number">{{covidDataFR.data.countrydata[0].total_deaths}}</p>, le nombre de contaminé(e)s en France serait estimé alors à  <h2 class="estimated"> {{estimatedCases_formatted}}</h2>
            résultant en un pourcentage de la population immunisé à l'heure actuelle de :<p class="number">{{ this.estimatedPercentage }} %</p> 
            <!--
            Aussi, selon les dernières statistiques du nb de morts/Jour, la France enregistre quasiment 
@@ -80,7 +80,7 @@ export default {
                         let part1 = this.estimatedCases.toString().substr(0,1)
                         let part2 = this.estimatedCases.toString().substr(1, 3)
                         let part3 = this.estimatedCases.toString().substr(4, 6)
-                        this.estimatedCases = part1.concat(" "+part2).concat(" "+part3)
+                        this.estimatedCases_formatted = part1.concat(" "+part2).concat(" "+part3)
                         this.estimatedPercentage = (this.estimatedCases/fr_population * 100).toFixed(2)
                         console.log(`estimatedCases : ${this.estimatedCases}`) 
                         
@@ -104,7 +104,8 @@ export default {
             oneDeathPerXmin:'',
             estimatedPercentage: '',
             covidDataFR:[],
-            estimatedCases:''
+            estimatedCases:'',
+            estimatedCases_formatted:''
         }
     },
     created(){

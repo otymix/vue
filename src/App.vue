@@ -3,7 +3,7 @@
    <v-app>
       <v-content class="black" >
         <v-container >
-                <FirstComponent/>
+                <Thehead />
                 <getDataCovid />
                 <share />
         </v-container>
@@ -15,7 +15,7 @@
 
 <script>
 
-import FirstComponent from './components/FirstComponent';
+import Thehead from './components/Thehead';
 import getDataCovid from '@/components/getDataCovid.vue';
 
 
@@ -23,8 +23,8 @@ export default {
   name: 'App',
 
   components: {
-
-    FirstComponent,
+    // eslint-disable-next-line vue/no-unused-components
+    Thehead,
     getDataCovid
   },
 

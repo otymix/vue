@@ -2,9 +2,9 @@
     <div>
 
       <div class="typewriter">
-        <h1 >Esimation du nombre d'infecté(e)s en France 🇫🇷 </h1>
+        <h1 >Estimation du nombre d'infecté(e)s en France 🇫🇷 </h1>
       </div>
-
+      
       <br />
 
  <v-card  class="mx-auto" max-width="80%">
@@ -31,7 +31,7 @@
         </v-btn-->
         <share />
         <v-btn     color="blue"      text >
-          Puis-Je-Survivre-Au-Covid?
+          Uis-Je-Survivre-Au-Covid?
         </v-btn>
       </v-card-actions>
     </v-card>
@@ -183,7 +183,7 @@ export default {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: red }
+  50% { border-color: white }
 }
 
 </style>
